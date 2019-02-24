@@ -5,8 +5,9 @@ Socket.io implementation for fusion apps.
 You are welcome to contribute in following:
 1. Unit Testing
 2. Integration Testing
-3. Opening issues
-4. Any other improvements
+3. Flow Types
+4. Opening issues
+5. Any other improvements
 
 ---
 

@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { createPlugin } from 'fusion-core'
-import socketServer from 'socket.io'
+import * as socketIO from 'socket.io'
 
 import { SocketIOConfigToken, SocketIOHandlersToken } from './tokens'
 import SocketProvider from './SocketProvider'
@@ -15,7 +15,8 @@ export default __NODE__ &&
     provides: ({ config = {}, handlers }) => {
       const { port = 80, origins = '*:*' } = config
       const eventTypes = Object.keys(handlers)
-      const io = socketServer(port)
+      const io = socketIO(port)
+
       io.origins(origins)
       io.on('connection', socket => {
         eventTypes.forEach(eventType => {
