@@ -33,6 +33,16 @@ yarn add fusion-plugin-socket-io
 ### Setup
 
 ```js
+// Compiler configuration is required to use this plugin 
+// .fusionrc.js
+module.exports = {
+  nodeBuiltins: {
+    process: true,
+    Buffer: true,
+  },
+}
+
+
 // src/main.js
 import React from 'react';
 import App from 'fusion-core';
