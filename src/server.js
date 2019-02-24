@@ -15,7 +15,7 @@ export default __NODE__ &&
     provides: ({ config = {}, handlers }) => {
       const { port = 80, origins = '*:*' } = config
       const eventTypes = Object.keys(handlers)
-      const io = socketIO(port)
+      const io = socketIO.listen(port)
 
       io.origins(origins)
       io.on('connection', socket => {
