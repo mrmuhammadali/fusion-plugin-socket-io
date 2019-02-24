@@ -1,0 +1,16 @@
+[ignore]
+.*/node_modules/.*[^(package)]\.json$
+<PROJECT_ROOT>/dist/.*
+<PROJECT_ROOT>/src/fixtures/
+
+[include]
+./src/
+
+[libs]
+./node_modules/fusion-core/flow-typed
+
+[lints]
+
+[options]
+
+[strict]
